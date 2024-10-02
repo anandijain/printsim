@@ -1,0 +1,4015 @@
+{
+"first_layer_groups": [
+{
+"group_id": 0,
+"slices": [
+{
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+}
+],
+"volume_ids": [
+0
+]
+}
+],
+"identify_id": 14,
+"layers": [
+{
+"height": 0.2,
+"layer_id": 0,
+"layer_regions": [
+{
+"config_hash": 13317169086077708041,
+"fill_expolygons": [],
+"fill_no_overlap_expolygons": [],
+"fill_surfaces": [],
+"fills": {
+"entities": [],
+"entity_type": "collection",
+"no_sort": false
+},
+"perimeters": {
+"entities": [
+{
+"entities": [
+{
+"entity_type": "loop",
+"loop_role": 0,
+"paths": [
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.07951313257217407,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5800001,
+-5417896,
+5779757,
+-5285751
+]
+},
+"role": 2,
+"width": 0.44048601388931274
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.08761046826839447,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5779757,
+-5285751,
+5759514,
+-5153606
+]
+},
+"role": 2,
+"width": 0.48097270727157593
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570779651403427,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5759514,
+-5153606,
+5739271,
+-5021461,
+5739271,
+5021462
+]
+},
+"role": 2,
+"width": 0.5214593410491943
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09643280506134033,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5739271,
+5021462,
+5737458,
+5104771
+]
+},
+"role": 2,
+"width": 0.525084376335144
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10428080707788467,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5737458,
+5104771,
+5717838,
+5401495
+]
+},
+"role": 2,
+"width": 0.5643243789672852
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.11212879419326782,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5717838,
+5401495,
+5698218,
+5698219,
+5359839,
+5718745
+]
+},
+"role": 2,
+"width": 0.6035643219947815
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1039183959364891,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5359839,
+5718745,
+5021461,
+5739271
+]
+},
+"role": 2,
+"width": 0.5625123381614685
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5021461,
+5739271,
+-5021462,
+5739271
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+5739271,
+-5359840,
+5718745
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5359840,
+5718745,
+-5698219,
+5698219,
+-5718745,
+5359840
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5718745,
+5359840,
+-5739271,
+5021462
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5739271,
+5021462,
+-5739271,
+-5021461
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5739271,
+-5021461,
+-5718745,
+-5359839
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5718745,
+-5359839,
+-5698219,
+-5698218,
+-5359840,
+-5718744
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5359840,
+-5718744,
+-5021462,
+-5739270
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+-5739270,
+5021461,
+-5739270,
+5153606,
+-5759513
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.08761060237884521,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5153606,
+-5759513,
+5285751,
+-5779757
+]
+},
+"role": 2,
+"width": 0.48097336292266846
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.07951319962739944,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5285751,
+-5779757,
+5417896,
+-5800001
+]
+},
+"role": 2,
+"width": 0.4404863715171814
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.07141580432653427,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5417896,
+-5800001,
+5800001,
+-5800001,
+5800001,
+-5417896
+]
+},
+"role": 2,
+"width": 0.39999938011169434
+}
+]
+},
+{
+"entity_type": "loop",
+"loop_role": 3,
+"paths": [
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5260732,
+-5021461,
+-5260732,
+5021462
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5260732,
+5021462,
+-5240206,
+5120571
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5240206,
+5120571,
+-5219680,
+5219680,
+-5120571,
+5240206
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5120571,
+5240206,
+-5021462,
+5260732
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+5260732,
+5021461,
+5260732
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1039183959364891,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5021461,
+5260732,
+5120570,
+5240206
+]
+},
+"role": 2,
+"width": 0.5625123381614685
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.11212879419326782,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5120570,
+5240206,
+5219679,
+5219680,
+5240205,
+5120571
+]
+},
+"role": 2,
+"width": 0.6035643219947815
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5240205,
+5120571,
+5260731,
+5021462
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5260731,
+5021462,
+5260731,
+-5021461,
+5021461,
+-5260731,
+-5021462,
+-5260731
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+-5260731,
+-5120571,
+-5240205
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5120571,
+-5240205,
+-5219680,
+-5219679,
+-5240206,
+-5120570
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5240206,
+-5120570,
+-5260732,
+-5021461
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+}
+]
+},
+{
+"entity_type": "multipath",
+"paths": [
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.08138199895620346,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5430027,
+-5448645,
+5379165,
+-5448645,
+5353733,
+-5404596,
+5379164,
+-5360547,
+5430027,
+-5360547,
+5455459,
+-5404596
+]
+},
+"role": 1,
+"width": 0.4498303532600403
+}
+]
+}
+],
+"entity_type": "collection",
+"no_sort": false
+}
+],
+"entity_type": "collection",
+"no_sort": false
+},
+"raw_slices": [
+{
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+}
+],
+"slices": [
+{
+"bridge_angle": -1.0,
+"expolygon": {
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+},
+"extra_perimeters": 0,
+"surface_type": 1,
+"thickness": -1.0,
+"thickness_layers": 1
+}
+],
+"thin_fills": {
+"entities": [],
+"entity_type": "collection",
+"no_sort": false
+},
+"unsupported_bridge_edges": []
+}
+],
+"overhang_bbox": [
+0,
+0,
+0,
+0
+],
+"overhang_polygons": [],
+"print_z": 0.2,
+"slice_z": 0.1,
+"sliced_bboxes": [
+[
+-6000001,
+-6000000,
+6000000,
+6000001
+]
+],
+"sliced_polygons": [
+{
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+}
+]
+},
+{
+"height": 0.2,
+"layer_id": 1,
+"layer_regions": [
+{
+"config_hash": 13317169086077708041,
+"fill_expolygons": [],
+"fill_no_overlap_expolygons": [],
+"fill_surfaces": [],
+"fills": {
+"entities": [],
+"entity_type": "collection",
+"no_sort": false
+},
+"perimeters": {
+"entities": [
+{
+"entities": [
+{
+"entity_type": "loop",
+"loop_role": 0,
+"paths": [
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.07141580432653427,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5417896,
+-5800001,
+5800001,
+-5800001,
+5800001,
+-5417896
+]
+},
+"role": 2,
+"width": 0.39999938011169434
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.07951313257217407,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5800001,
+-5417896,
+5779757,
+-5285751
+]
+},
+"role": 2,
+"width": 0.44048601388931274
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.08761046826839447,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5779757,
+-5285751,
+5759514,
+-5153606
+]
+},
+"role": 2,
+"width": 0.48097270727157593
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570779651403427,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5759514,
+-5153606,
+5739271,
+-5021461,
+5739271,
+5021462
+]
+},
+"role": 2,
+"width": 0.5214593410491943
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09643280506134033,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5739271,
+5021462,
+5737458,
+5104771
+]
+},
+"role": 2,
+"width": 0.525084376335144
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10428080707788467,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5737458,
+5104771,
+5717838,
+5401495
+]
+},
+"role": 2,
+"width": 0.5643243789672852
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.11212879419326782,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5717838,
+5401495,
+5698218,
+5698219,
+5359839,
+5718745
+]
+},
+"role": 2,
+"width": 0.6035643219947815
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1039183959364891,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5359839,
+5718745,
+5021461,
+5739271
+]
+},
+"role": 2,
+"width": 0.5625123381614685
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5021461,
+5739271,
+-5021462,
+5739271
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+5739271,
+-5359840,
+5718745
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5359840,
+5718745,
+-5698219,
+5698219,
+-5718745,
+5359840
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5718745,
+5359840,
+-5739271,
+5021462
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5739271,
+5021462,
+-5739271,
+-5021461
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5739271,
+-5021461,
+-5718745,
+-5359839
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5718745,
+-5359839,
+-5698219,
+-5698218,
+-5359840,
+-5718744
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5359840,
+-5718744,
+-5021462,
+-5739270
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+-5739270,
+5021461,
+-5739270,
+5153606,
+-5759513
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.08761060237884521,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5153606,
+-5759513,
+5285751,
+-5779757
+]
+},
+"role": 2,
+"width": 0.48097336292266846
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.07951319962739944,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5285751,
+-5779757,
+5417896,
+-5800001
+]
+},
+"role": 2,
+"width": 0.4404863715171814
+}
+]
+},
+{
+"entity_type": "loop",
+"loop_role": 3,
+"paths": [
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+5260732,
+5021461,
+5260732
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1039183959364891,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5021461,
+5260732,
+5120570,
+5240206
+]
+},
+"role": 2,
+"width": 0.5625123381614685
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.11212879419326782,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5120570,
+5240206,
+5219679,
+5219680,
+5240205,
+5120571
+]
+},
+"role": 2,
+"width": 0.6035643219947815
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5240205,
+5120571,
+5260731,
+5021462
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5260731,
+5021462,
+5260731,
+-5021461,
+5208584,
+-5073608
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5208584,
+-5073608,
+5073608,
+-5208584
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5073608,
+-5208584,
+5021461,
+-5260731,
+-5021462,
+-5260731
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+-5260731,
+-5120571,
+-5240205
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5120571,
+-5240205,
+-5219680,
+-5219679,
+-5240206,
+-5120570
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5240206,
+-5120570,
+-5260732,
+-5021461
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5260732,
+-5021461,
+-5260732,
+5021462
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5260732,
+5021462,
+-5240206,
+5120571
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5240206,
+5120571,
+-5219680,
+5219680,
+-5120571,
+5240206
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5120571,
+5240206,
+-5021462,
+5260732
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+}
+]
+},
+{
+"entity_type": "multipath",
+"paths": [
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.08138199895620346,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5455459,
+-5404596,
+5430027,
+-5360547,
+5379164,
+-5360547,
+5353733,
+-5404596,
+5379165,
+-5448645,
+5430027,
+-5448645
+]
+},
+"role": 1,
+"width": 0.4498303532600403
+}
+]
+}
+],
+"entity_type": "collection",
+"no_sort": false
+}
+],
+"entity_type": "collection",
+"no_sort": false
+},
+"raw_slices": [
+{
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+}
+],
+"slices": [
+{
+"bridge_angle": -1.0,
+"expolygon": {
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+},
+"extra_perimeters": 0,
+"surface_type": 3,
+"thickness": -1.0,
+"thickness_layers": 1
+}
+],
+"thin_fills": {
+"entities": [],
+"entity_type": "collection",
+"no_sort": false
+},
+"unsupported_bridge_edges": []
+}
+],
+"overhang_bbox": [
+0,
+0,
+0,
+0
+],
+"overhang_polygons": [],
+"print_z": 0.4,
+"slice_z": 0.30000000000000004,
+"sliced_bboxes": [
+[
+-6000001,
+-6000000,
+6000000,
+6000001
+]
+],
+"sliced_polygons": [
+{
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+}
+]
+},
+{
+"height": 0.20000000000000007,
+"layer_id": 2,
+"layer_regions": [
+{
+"config_hash": 13317169086077708041,
+"fill_expolygons": [],
+"fill_no_overlap_expolygons": [],
+"fill_surfaces": [],
+"fills": {
+"entities": [],
+"entity_type": "collection",
+"no_sort": false
+},
+"perimeters": {
+"entities": [
+{
+"entities": [
+{
+"entity_type": "loop",
+"loop_role": 0,
+"paths": [
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.07141580432653427,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5417896,
+-5800001,
+5800001,
+-5800001,
+5800001,
+-5417896
+]
+},
+"role": 2,
+"width": 0.39999938011169434
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.07951313257217407,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5800001,
+-5417896,
+5779757,
+-5285751
+]
+},
+"role": 2,
+"width": 0.44048601388931274
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.08761046826839447,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5779757,
+-5285751,
+5759514,
+-5153606
+]
+},
+"role": 2,
+"width": 0.48097270727157593
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570779651403427,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5759514,
+-5153606,
+5739271,
+-5021461,
+5739271,
+5021462
+]
+},
+"role": 2,
+"width": 0.5214593410491943
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09643280506134033,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5739271,
+5021462,
+5737458,
+5104771
+]
+},
+"role": 2,
+"width": 0.525084376335144
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10428080707788467,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5737458,
+5104771,
+5717838,
+5401495
+]
+},
+"role": 2,
+"width": 0.5643243789672852
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.11212879419326782,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5717838,
+5401495,
+5698218,
+5698219,
+5359839,
+5718745
+]
+},
+"role": 2,
+"width": 0.6035643219947815
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1039183959364891,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5359839,
+5718745,
+5021461,
+5739271
+]
+},
+"role": 2,
+"width": 0.5625123381614685
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5021461,
+5739271,
+-5021462,
+5739271
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+5739271,
+-5359840,
+5718745
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5359840,
+5718745,
+-5698219,
+5698219,
+-5718745,
+5359840
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5718745,
+5359840,
+-5739271,
+5021462
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5739271,
+5021462,
+-5739271,
+-5021461
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5739271,
+-5021461,
+-5718745,
+-5359839
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5718745,
+-5359839,
+-5698219,
+-5698218,
+-5359840,
+-5718744
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5359840,
+-5718744,
+-5021462,
+-5739270
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+-5739270,
+5021461,
+-5739270,
+5153606,
+-5759513
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.08761060237884521,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5153606,
+-5759513,
+5285751,
+-5779757
+]
+},
+"role": 2,
+"width": 0.48097336292266846
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.07951319962739944,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5285751,
+-5779757,
+5417896,
+-5800001
+]
+},
+"role": 2,
+"width": 0.4404863715171814
+}
+]
+},
+{
+"entity_type": "loop",
+"loop_role": 3,
+"paths": [
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+5260732,
+5021461,
+5260732
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1039183959364891,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5021461,
+5260732,
+5120570,
+5240206
+]
+},
+"role": 2,
+"width": 0.5625123381614685
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.11212879419326782,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5120570,
+5240206,
+5219679,
+5219680,
+5240205,
+5120571
+]
+},
+"role": 2,
+"width": 0.6035643219947815
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5240205,
+5120571,
+5260731,
+5021462
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5260731,
+5021462,
+5260731,
+-5021461,
+5208584,
+-5073608
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5208584,
+-5073608,
+5073608,
+-5208584
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5073608,
+-5208584,
+5021461,
+-5260731,
+-5021462,
+-5260731
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+-5260731,
+-5120571,
+-5240205
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5120571,
+-5240205,
+-5219680,
+-5219679,
+-5240206,
+-5120570
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5240206,
+-5120570,
+-5260732,
+-5021461
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5260732,
+-5021461,
+-5260732,
+5021462
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5260732,
+5021462,
+-5240206,
+5120571
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5240206,
+5120571,
+-5219680,
+5219680,
+-5120571,
+5240206
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5120571,
+5240206,
+-5021462,
+5260732
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+}
+]
+},
+{
+"entity_type": "multipath",
+"paths": [
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.08138199895620346,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5455459,
+-5404596,
+5430027,
+-5360547,
+5379164,
+-5360547,
+5353733,
+-5404596,
+5379165,
+-5448645,
+5430027,
+-5448645
+]
+},
+"role": 1,
+"width": 0.4498303532600403
+}
+]
+}
+],
+"entity_type": "collection",
+"no_sort": false
+}
+],
+"entity_type": "collection",
+"no_sort": false
+},
+"raw_slices": [
+{
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+}
+],
+"slices": [
+{
+"bridge_angle": -1.0,
+"expolygon": {
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+},
+"extra_perimeters": 0,
+"surface_type": 3,
+"thickness": -1.0,
+"thickness_layers": 1
+}
+],
+"thin_fills": {
+"entities": [],
+"entity_type": "collection",
+"no_sort": false
+},
+"unsupported_bridge_edges": []
+}
+],
+"overhang_bbox": [
+0,
+0,
+0,
+0
+],
+"overhang_polygons": [],
+"print_z": 0.6000000000000001,
+"slice_z": 0.5,
+"sliced_bboxes": [
+[
+-6000001,
+-6000000,
+6000000,
+6000001
+]
+],
+"sliced_polygons": [
+{
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+}
+]
+},
+{
+"height": 0.19999999999999996,
+"layer_id": 3,
+"layer_regions": [
+{
+"config_hash": 13317169086077708041,
+"fill_expolygons": [],
+"fill_no_overlap_expolygons": [],
+"fill_surfaces": [],
+"fills": {
+"entities": [],
+"entity_type": "collection",
+"no_sort": false
+},
+"perimeters": {
+"entities": [
+{
+"entities": [
+{
+"entity_type": "loop",
+"loop_role": 0,
+"paths": [
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.07141580432653427,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5417896,
+-5800001,
+5800001,
+-5800001,
+5800001,
+-5417896
+]
+},
+"role": 2,
+"width": 0.39999938011169434
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.07951313257217407,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5800001,
+-5417896,
+5779757,
+-5285751
+]
+},
+"role": 2,
+"width": 0.44048601388931274
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.08761046826839447,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5779757,
+-5285751,
+5759514,
+-5153606
+]
+},
+"role": 2,
+"width": 0.48097270727157593
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570779651403427,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5759514,
+-5153606,
+5739271,
+-5021461,
+5739271,
+5021462
+]
+},
+"role": 2,
+"width": 0.5214593410491943
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09643280506134033,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5739271,
+5021462,
+5737458,
+5104771
+]
+},
+"role": 2,
+"width": 0.525084376335144
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10428080707788467,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5737458,
+5104771,
+5717838,
+5401495
+]
+},
+"role": 2,
+"width": 0.5643243789672852
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.11212879419326782,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5717838,
+5401495,
+5698218,
+5698219,
+5359839,
+5718745
+]
+},
+"role": 2,
+"width": 0.6035643219947815
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1039183959364891,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5359839,
+5718745,
+5021461,
+5739271
+]
+},
+"role": 2,
+"width": 0.5625123381614685
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5021461,
+5739271,
+-5021462,
+5739271
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+5739271,
+-5359840,
+5718745
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5359840,
+5718745,
+-5698219,
+5698219,
+-5718745,
+5359840
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5718745,
+5359840,
+-5739271,
+5021462
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5739271,
+5021462,
+-5739271,
+-5021461
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5739271,
+-5021461,
+-5718745,
+-5359839
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5718745,
+-5359839,
+-5698219,
+-5698218,
+-5359840,
+-5718744
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5359840,
+-5718744,
+-5021462,
+-5739270
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+-5739270,
+5021461,
+-5739270,
+5153606,
+-5759513
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.08761060237884521,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5153606,
+-5759513,
+5285751,
+-5779757
+]
+},
+"role": 2,
+"width": 0.48097336292266846
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.07951319962739944,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5285751,
+-5779757,
+5417896,
+-5800001
+]
+},
+"role": 2,
+"width": 0.4404863715171814
+}
+]
+},
+{
+"entity_type": "loop",
+"loop_role": 3,
+"paths": [
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+5260732,
+5021461,
+5260732
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1039183959364891,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5021461,
+5260732,
+5120570,
+5240206
+]
+},
+"role": 2,
+"width": 0.5625123381614685
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.11212879419326782,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5120570,
+5240206,
+5219679,
+5219680,
+5240205,
+5120571
+]
+},
+"role": 2,
+"width": 0.6035643219947815
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5240205,
+5120571,
+5260731,
+5021462
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5260731,
+5021462,
+5260731,
+-5021461,
+5208584,
+-5073608
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5208584,
+-5073608,
+5073608,
+-5208584
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5073608,
+-5208584,
+5021461,
+-5260731,
+-5021462,
+-5260731
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+-5260731,
+-5120571,
+-5240205
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5120571,
+-5240205,
+-5219680,
+-5219679,
+-5240206,
+-5120570
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5240206,
+-5120570,
+-5260732,
+-5021461
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5260732,
+-5021461,
+-5260732,
+5021462
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5260732,
+5021462,
+-5240206,
+5120571
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5240206,
+5120571,
+-5219680,
+5219680,
+-5120571,
+5240206
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5120571,
+5240206,
+-5021462,
+5260732
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+}
+]
+},
+{
+"entity_type": "multipath",
+"paths": [
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.08138199895620346,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5455459,
+-5404596,
+5430027,
+-5360547,
+5379164,
+-5360547,
+5353733,
+-5404596,
+5379165,
+-5448645,
+5430027,
+-5448645
+]
+},
+"role": 1,
+"width": 0.4498303532600403
+}
+]
+}
+],
+"entity_type": "collection",
+"no_sort": false
+}
+],
+"entity_type": "collection",
+"no_sort": false
+},
+"raw_slices": [
+{
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+}
+],
+"slices": [
+{
+"bridge_angle": -1.0,
+"expolygon": {
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+},
+"extra_perimeters": 0,
+"surface_type": 3,
+"thickness": -1.0,
+"thickness_layers": 1
+}
+],
+"thin_fills": {
+"entities": [],
+"entity_type": "collection",
+"no_sort": false
+},
+"unsupported_bridge_edges": []
+}
+],
+"overhang_bbox": [
+0,
+0,
+0,
+0
+],
+"overhang_polygons": [],
+"print_z": 0.8,
+"slice_z": 0.7000000000000001,
+"sliced_bboxes": [
+[
+-6000001,
+-6000000,
+6000000,
+6000001
+]
+],
+"sliced_polygons": [
+{
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+}
+]
+},
+{
+"height": 0.19999999999999996,
+"layer_id": 4,
+"layer_regions": [
+{
+"config_hash": 13317169086077708041,
+"fill_expolygons": [
+{
+"contour": [
+5675024,
+-5409877,
+5523408,
+-4915017,
+5236023,
+-5236023,
+4915017,
+-5523408,
+5409877,
+-5675024,
+5675024,
+-5675024
+],
+"holes": []
+}
+],
+"fill_no_overlap_expolygons": [
+{
+"contour": [
+5621463,
+-5417898,
+5500002,
+-5021461,
+5273954,
+-5273954,
+5021461,
+-5500002,
+5417898,
+-5621463,
+5621463,
+-5621463
+],
+"holes": []
+}
+],
+"fill_surfaces": [
+{
+"bridge_angle": -1.0,
+"expolygon": {
+"contour": [
+5675024,
+-5409875,
+5523408,
+-4915017,
+5236023,
+-5236023,
+4915017,
+-5523408,
+5409875,
+-5675024,
+5675024,
+-5675024
+],
+"holes": []
+},
+"extra_perimeters": 0,
+"surface_type": 0,
+"thickness": -1.0,
+"thickness_layers": 1
+}
+],
+"fills": {
+"entities": [],
+"entity_type": "collection",
+"no_sort": false
+},
+"perimeters": {
+"entities": [
+{
+"entities": [
+{
+"entity_type": "loop",
+"loop_role": 0,
+"paths": [
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.07141580432653427,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5417896,
+-5800001,
+5800001,
+-5800001,
+5800001,
+-5417896
+]
+},
+"role": 2,
+"width": 0.39999938011169434
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.07951313257217407,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5800001,
+-5417896,
+5779757,
+-5285751
+]
+},
+"role": 2,
+"width": 0.44048601388931274
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.08761046826839447,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5779757,
+-5285751,
+5759514,
+-5153606
+]
+},
+"role": 2,
+"width": 0.48097270727157593
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570779651403427,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5759514,
+-5153606,
+5739271,
+-5021461,
+5739271,
+5021462
+]
+},
+"role": 2,
+"width": 0.5214593410491943
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09643280506134033,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5739271,
+5021462,
+5737458,
+5104771
+]
+},
+"role": 2,
+"width": 0.525084376335144
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10428080707788467,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5737458,
+5104771,
+5717838,
+5401495
+]
+},
+"role": 2,
+"width": 0.5643243789672852
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.11212879419326782,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5717838,
+5401495,
+5698218,
+5698219,
+5359839,
+5718745
+]
+},
+"role": 2,
+"width": 0.6035643219947815
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1039183959364891,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5359839,
+5718745,
+5021461,
+5739271
+]
+},
+"role": 2,
+"width": 0.5625123381614685
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5021461,
+5739271,
+-5021462,
+5739271
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+5739271,
+-5359840,
+5718745
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5359840,
+5718745,
+-5698219,
+5698219,
+-5718745,
+5359840
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5718745,
+5359840,
+-5739271,
+5021462
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5739271,
+5021462,
+-5739271,
+-5021461
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5739271,
+-5021461,
+-5718745,
+-5359839
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5718745,
+-5359839,
+-5698219,
+-5698218,
+-5359840,
+-5718744
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5359840,
+-5718744,
+-5021462,
+-5739270
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+-5739270,
+5021461,
+-5739270,
+5153606,
+-5759513
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.08761060237884521,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5153606,
+-5759513,
+5285751,
+-5779757
+]
+},
+"role": 2,
+"width": 0.48097336292266846
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.07951319962739944,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5285751,
+-5779757,
+5417896,
+-5800001
+]
+},
+"role": 2,
+"width": 0.4404863715171814
+}
+]
+},
+{
+"entity_type": "loop",
+"loop_role": 3,
+"paths": [
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+5260732,
+5021461,
+5260732
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1039183959364891,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5021461,
+5260732,
+5120570,
+5240206
+]
+},
+"role": 2,
+"width": 0.5625123381614685
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.11212879419326782,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5120570,
+5240206,
+5219679,
+5219680,
+5240205,
+5120571
+]
+},
+"role": 2,
+"width": 0.6035643219947815
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5240205,
+5120571,
+5260731,
+5021462
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5260731,
+5021462,
+5260731,
+-5021461,
+5208584,
+-5073608
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5208584,
+-5073608,
+5073608,
+-5208584
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+5073608,
+-5208584,
+5021461,
+-5260731,
+-5021462,
+-5260731
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5021462,
+-5260731,
+-5120571,
+-5240205
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5120571,
+-5240205,
+-5219680,
+-5219679,
+-5240206,
+-5120570
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5240206,
+-5120570,
+-5260732,
+-5021461
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.09570799767971039,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5260732,
+-5021461,
+-5260732,
+5021462
+]
+},
+"role": 2,
+"width": 0.5214603543281555
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5260732,
+5021462,
+-5240206,
+5120571
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.1121286004781723,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5240206,
+5120571,
+-5219680,
+5219680,
+-5120571,
+5240206
+]
+},
+"role": 2,
+"width": 0.6035633683204651
+},
+{
+"curve_degree": 0,
+"height": 0.20000000298023224,
+"mm3_per_mm": 0.10391829907894135,
+"no_extrusion": false,
+"overhang_degree": 0.0,
+"polyline": {
+"arc_fitting": [],
+"points": [
+-5120571,
+5240206,
+-5021462,
+5260732
+]
+},
+"role": 2,
+"width": 0.5625118613243103
+}
+]
+}
+],
+"entity_type": "collection",
+"no_sort": false
+}
+],
+"entity_type": "collection",
+"no_sort": false
+},
+"raw_slices": [
+{
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+}
+],
+"slices": [
+{
+"bridge_angle": -1.0,
+"expolygon": {
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+},
+"extra_perimeters": 0,
+"surface_type": 0,
+"thickness": -1.0,
+"thickness_layers": 1
+}
+],
+"thin_fills": {
+"entities": [],
+"entity_type": "collection",
+"no_sort": false
+},
+"unsupported_bridge_edges": []
+}
+],
+"overhang_bbox": [
+0,
+0,
+0,
+0
+],
+"overhang_polygons": [],
+"print_z": 1.0,
+"slice_z": 0.9,
+"sliced_bboxes": [
+[
+-6000001,
+-6000000,
+6000000,
+6000001
+]
+],
+"sliced_polygons": [
+{
+"contour": [
+6000000,
+6000001,
+-6000001,
+6000001,
+-6000001,
+-6000000,
+6000000,
+-6000000
+],
+"holes": [
+[
+-5000001,
+-5000000,
+-5000001,
+5000001,
+5000000,
+5000001,
+5000000,
+-5000000
+]
+]
+}
+]
+}
+],
+"name": "./tests/square_ring/square_ring.step",
+"support_layers": []
+}
