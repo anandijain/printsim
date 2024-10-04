@@ -1,8 +1,21 @@
-# print sim 
+# printsim
 
+this repo aims to recreate this paper:
 https://www.sciencedirect.com/science/article/pii/S2214785322063271
 
+
+which takes a step file, calls a standard slicer, then uses the outputted gcode to reconstruct a 3d model
+using a sequence of sweeps with a specified profile. effectively:
+
 STEP -> gcode -> STEP 
+
+the aim is to improve the quality of FEA simuations of FDM 3D printed parts.
+
+
+
+
+
+--- mahh stuffzzzzzzz ----
 
 C:\Program` Files\Bambu` Studio\bambu-studio.exe --outputdir straight_line_test --export-slicedata straight_line_test/ --slice 0 --debug 2 --export-3mf output.3mf "straight_line_test.step"
 
