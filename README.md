@@ -15,3 +15,13 @@ test_name/
 in this has ./XXX.step 
 and /sliced_output/
 which is where bambu/julia should put it
+
+points A B ::Vector
+p1 = Plane(0, 0, A)
+p2 = Plane(0, 0, B)
+
+here actually get sketch points Ap Bp 
+
+
+ls = LineSegment(A, B)
+p = plane that intersects A and is perpendicular to ls

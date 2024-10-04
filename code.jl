@@ -26,56 +26,48 @@ function update_cur_pos!(cur_pos, as)
     (cur_pos, e_found)
 end
 
-gs = filter(startswith("G1"), readlines("gsq.gcode"))
 function doesit(gs)
-    i = 1
-    cur_pos = [0.0, 0.0, 0.0, 0.0, 0.0]
-    last_pos = [0.0, 0.0, 0.0, 0.0, 0.0]
-    all_ps = []
-    cur_path = []
+    cur_pos = [0.0, 0.0, 0.0, 0.0, 0.0]  # [X, Y, Z, E, F]
+    last_pos = [0.0, 0.0, 0.0, 0.0, 0.0]  # Track the last position
+    all_ps = []  # Store all paths
+    cur_path = []  # Current path
 
-    for g in first(gs, 40)
+    for g in gs
         as = split(find_first_part(g))[2:end]
         (cur_pos, efound) = update_cur_pos!(cur_pos, as)
 
-        # Determine if extrusion is happening
-        extruding = (last_pos[4] + cur_pos[4]) > 0
+        # Determine if extrusion is happening (extrusion > 0)
+        extruding = (cur_pos[4] > 0)
 
         if extruding
-            # Starting or continuing an extrusion path
+            # Add to the current path or start a new path if it's empty
             if isempty(cur_path)
-                p = [last_pos, cur_pos]
-                @show "starting a new path" p
-                append!(cur_path, p)
+                append!(cur_path, [copy(last_pos), copy(cur_pos)])
             else
-                @show "adding to existing path" cur_pos, cur_path
                 push!(cur_path, copy(cur_pos))
             end
         else
-            # No extrusion or finished, check for new path
-            if efound
-                cur_pos[4] = last_pos[4] + cur_pos[4]
-            end
+            # If not extruding, finalize the current path and start a new one
             if !isempty(cur_path)
-                @show "adding cur path to all_ps" cur_path
                 push!(all_ps, copy(cur_path))
                 cur_path = []
             end
         end
 
-        @info i, (last_pos, cur_pos)
-        cur_pos[4] = min(0, cur_pos[4])  # Reset E if needed
-
+        # Update last_pos for next iteration
         last_pos = copy(cur_pos)
-        i += 1
+
+        # Reset the extrusion position to handle relative values properly
+        cur_pos[4] = 0
     end
 
-    # If any remaining path, add to all_ps
+    # Add any remaining path to all_ps
     if !isempty(cur_path)
         push!(all_ps, copy(cur_path))
     end
 
     all_ps
 end
-
+gs = filter(startswith("G1"), readlines("gsq.gcode"))
+gst = filter(!startswith("G1 F"), gs)
 ps = doesit(gs)
