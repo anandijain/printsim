@@ -12,6 +12,8 @@ function writelines(fn, vec)
         end
     end
 end
+
+
 executable = "C:\\Program Files\\Bambu Studio\\bambu-studio.exe"
 outputdir = "./tests/square_ring/sliced"
 !ispath(outputdir) && mkdir(outputdir)
@@ -26,8 +28,9 @@ filtf(g) = filter(x -> !startswith(x, ";") && !isempty(x), g)
 function filt_gcode(name)
     fn = gcode_fn(name)
     g = readlines(fn)
-    gf = filtf(g)
+    filtf(g)
 end
+
 gs = filt_gcode("square_ring")
 g1s = filter(startswith("G1"), gs)
 writelines("gs_square.gcode", gs)

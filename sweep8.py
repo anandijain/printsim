@@ -71,13 +71,22 @@ def make_pipe(doc, point1, point2, width=.4, height=.2):
 
     # Create a Datum Plane normal to the edge and using both ShapeBinders as references
     datum_plane = create_datum_plane(doc, body, [shape_binder_edge, shape_binder_vertex])
-
+    datum_plane.Visibility=False
     # Create a sketch on the Datum Plane and add a rectangle
     sketch = create_sketch_on_plane(doc, body, datum_plane)
     add_rectangle_to_sketch(sketch, width, height)
 
     # Create an additive pipe along the edge (spine)
     create_additive_pipe(doc, body, sketch, shape_binder_edge)
+
+
+import json 
+data = json.load(open('C:\\Users\\anand\\.rust\\printsim\\coords.json'))
+
+# points = [data[0][0]]
+# points = []
+# for d in data:
+#     points.append()
 
 # Main logic
 doc = create_document("ShapeBinderExample")
@@ -86,10 +95,14 @@ doc = create_document("ShapeBinderExample")
 body = create_body(doc)
 
 # Define line segment points
-point1 = App.Vector(1, 2, 3)
-point2 = App.Vector(-3, 6, 4)
-point3 = App.Vector(0, 0, 0)
-make_pipe(doc, point1, point2)
-make_pipe(doc, point2, point3)
+# point1 = App.Vector(1, 2, 3)
+# point2 = App.Vector(-3, 6, 4)
+# point3 = App.Vector(0, 0, 0)
+
+for d in data:
+    make_pipe(doc, App.Vector(d[0]), App.Vector(d[1]))
+
+# make_pipe(doc, point1, point2)
+# make_pipe(doc, point2, point3)
 # Recompute the document to update the model
 doc.recompute()
