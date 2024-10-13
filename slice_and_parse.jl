@@ -5,6 +5,7 @@ function slice_with_bambu(executable::String, outputdir::String, slicefile::Stri
     cmd = `$(executable) --outputdir $(outputdir) --export-slicedata $(outputdir)/ --slice $(slice) --debug $(debug) --export-3mf $(export_3mf) $(slicefile)`
     run(cmd)
 end
+
 function writelines(fn, vec)
     open(fn, "w") do file
         for line in vec
@@ -15,9 +16,9 @@ end
 
 
 executable = "C:\\Program Files\\Bambu Studio\\bambu-studio.exe"
-outputdir = "./tests/square_ring/sliced"
+outputdir = "./tests/wormdrive/sliced"
 !ispath(outputdir) && mkdir(outputdir)
-slicefile = "./tests/square_ring/square_ring.step"
+slicefile = "./tests/wormdrive/wormdrive.step"
 
 slice_with_bambu(executable, outputdir, slicefile; slice=0, debug=2, export_3mf="output.3mf")
 

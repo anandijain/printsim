@@ -14,10 +14,11 @@ the goal is to allow users to use pretty much any slicer, and pretty much any ca
 since the method is pretty agnostic to which cad you use.
 
 todo:
-* fix the LineSegment generation from gcode
+* fix the LineSegment generation from gcode to have contiguous paths 
 * see if we can get the test cases to work in freecad
 * add the combining of the individual sweeps (as they generate separate bodies) into signle body 
 * add the freecad code to export the single body/part as a step file. 
+* benchmarking and improving performance
 * load the step into fusion
 * do a simulatino 
 

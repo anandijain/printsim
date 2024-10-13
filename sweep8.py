@@ -11,12 +11,20 @@ def create_body(doc, body_name="Body"):
     body = doc.addObject("PartDesign::Body", body_name)
     return body
 
-# Create a line segment between two points
-def create_line(doc, point1, point2, feature_name="LineSegment"):
-    line = Part.LineSegment(point1, point2).toShape()
-    line_feature = doc.addObject("Part::Feature", feature_name)
-    line_feature.Shape = line
-    return line_feature
+# Create a multi-segment path (wire) from a list of points
+def create_path_from_points(doc, points, feature_name="Path"):
+    edges = []
+    for i in range(len(points) - 1):
+        line = Part.LineSegment(points[i], points[i+1]).toShape()
+        edges.append(line)
+    
+    # Create a wire from the edges (path with multiple line segments)
+    wire = Part.Wire(edges)
+    
+    # Add wire to the document as a Part Feature
+    path_feature = doc.addObject("Part::Feature", feature_name)
+    path_feature.Shape = wire
+    return path_feature
 
 # Create a ShapeBinder for a specific shape element (e.g., Edge, Vertex)
 def create_shape_binder(doc, body, feature, shape_element, binder_name):
@@ -57,13 +65,13 @@ def add_rectangle_to_sketch(sketch, width, height):
 def create_additive_pipe(doc, body, sketch, spine):
     additive_pipe = body.newObject('PartDesign::AdditivePipe', 'AdditivePipe')
     additive_pipe.Profile = sketch
-    additive_pipe.Spine = (spine, ["Edge1"])
+    additive_pipe.Spine = (spine, [])
     return additive_pipe
 
-def make_pipe(doc, point1, point2, width=.4, height=.2):
+def make_pipe(doc, points, width=.4, height=.2):
     body = create_body(doc)
     # Create line feature
-    line_feature = create_line(doc, point1, point2)
+    line_feature = create_path_from_points(doc, points)
 
     # Create ShapeBinders for the edge and vertex
     shape_binder_edge = create_shape_binder(doc, body, line_feature, 'Edge1', "ShapeBinderEdge")
@@ -77,12 +85,19 @@ def make_pipe(doc, point1, point2, width=.4, height=.2):
     add_rectangle_to_sketch(sketch, width, height)
 
     # Create an additive pipe along the edge (spine)
-    create_additive_pipe(doc, body, sketch, shape_binder_edge)
+    create_additive_pipe(doc, body, sketch, line_feature)
 
 
 import json 
 data = json.load(open('C:\\Users\\anand\\.rust\\printsim\\coords.json'))
+gcs = json.load(open('C:\\Users\\anand\\.rust\\printsim\\wires.json'))
 
+def coords_list_to_points_list(gcs):
+    xs = [x[0] for x in gcs]
+    xs.append(gcs[len(gcs)-1][1])
+    return xs
+
+ps = coords_list_to_points_list(gcs[0])
 # points = [data[0][0]]
 # points = []
 # for d in data:
@@ -94,13 +109,16 @@ doc = create_document("ShapeBinderExample")
 # Create body
 body = create_body(doc)
 
+pss =list(map(App.Vector, ps))
+path = create_path_from_points(doc, pss)
+
 # Define line segment points
 # point1 = App.Vector(1, 2, 3)
 # point2 = App.Vector(-3, 6, 4)
 # point3 = App.Vector(0, 0, 0)
+make_pipe(doc, list(map(App.Vector, ps)))
 
-for d in data:
-    make_pipe(doc, App.Vector(d[0]), App.Vector(d[1]))
+# for d in data[0:5]:
 
 # make_pipe(doc, point1, point2)
 # make_pipe(doc, point2, point3)

@@ -69,12 +69,7 @@ function doesit(gs)
 
     all_ps
 end
-gs = filter(startswith("G1"), readlines("gsq.gcode"))
-gst = filter(!startswith("G1 F"), gs)
-ps = doesit(gs)
 
-g = gst[1]
-g = gst[2]
 
 function doit2(gs)
     cur_pos = [0.0, 0.0, 0.0, 0.0, 0.0]  # [X, Y, Z, E, F]
@@ -102,20 +97,6 @@ function doit2(gs)
 
 end
 
-ps = doit2(gst)
-extract_coords(g) = first(g, 3)
-cs = map(x -> extract_coords.(x), ps)
-# for c in cs
-#     if c[1] == c[2]
-csreal = filter(x->x[1]!=x[2], cs)
-
-# multipaths = []
-# for i in eachindex(csreal)
-#     if i == length(csreal)
-#         break
-#     end
-#     if csreal[i][2] == csreal[i+1][1]
-        
 
 function group_contiguous_paths(paths::Vector{Tuple{Vector{Float64},Vector{Float64}}})
     grouped_paths = []
@@ -141,6 +122,28 @@ end
 #     [A, B],
 #     [A2, B2]
 # }
-group_contiguous_paths(csreal)
+
+gs = filter(startswith("G1"), readlines("C:\\Users\\anand\\.rust\\printsim\\tests\\wormdrive\\sliced\\plate_1.gcode"))
+gst = filter(!startswith("G1 F"), gs)
+ps = doesit(gs)
+
+g = gst[1]
+g = gst[2]
+
+ps = doit2(gst)
+extract_coords(g) = first(g, 3)
+cs = map(x -> extract_coords.(x), ps)
+# for c in cs
+#     if c[1] == c[2]
+csreal = filter(x -> x[1] != x[2], cs)
+
+# multipaths = []
+# for i in eachindex(csreal)
+#     if i == length(csreal)
+#         break
+#     end
+#     if csreal[i][2] == csreal[i+1][1]
+
+gcs = group_contiguous_paths(csreal)
 foo = JSON3.read(JSON3.write(csreal))
-JSON3.write("coords.json", csreal)
+JSON3.write("wormdrivecoords.json", csreal)
