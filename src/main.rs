@@ -1,4 +1,8 @@
-use std::{env, fs::{read_to_string, File}, io::Write};
+use std::{
+    env,
+    fs::{read_to_string, File},
+    io::Write,
+};
 
 use anyhow;
 
@@ -60,9 +64,63 @@ impl Cuboid {
     }
 }
 
+const LAYER_HEIGHT: f64 = 0.2;
+
+fn cuboid_from_coords(coords: Vec<Vec<f64>>) -> Cuboid {
+    // Ensure there are 8 corners (each with 3 coordinates)
+    assert!(coords.len() == 8 && coords.iter().all(|c| c.len() == 3));
+
+    // Initialize min and max with the first coordinate
+    let mut min = coords[0].clone();
+    let mut max = coords[0].clone();
+
+    // Iterate over the remaining coordinates to find the true min and max
+    for coord in &coords[1..] {
+        for i in 0..3 {
+            min[i] = min[i].min(coord[i]); // Find minimum for each axis
+            max[i] = max[i].max(coord[i]); // Find maximum for each axis
+        }
+    }
+
+    Cuboid::new((min[0], min[1], min[2]), (max[0], max[1], max[2]))
+}
+
 // s is the string of the whole gcode
-fn cuboids_from_gcode(s: &str) -> Result<Vec<Cuboid>, anyhow::Error> {
-    Ok(vec![])
+fn cuboid_from_seg(seg: &Vec<Vec<f64>>) -> Result<Cuboid, anyhow::Error> {
+    let (a, b) = (seg[0].clone(), seg[1].clone());
+    assert!(a[2] == b[2]);
+    let hyp = vec![b[0] - a[0], b[1] - a[1]];
+    let opp = vec![b[0], a[1]];
+    let hyp_dist = (hyp[0].powi(2) + hyp[1].powi(2)).sqrt();
+    let opp_dist = (opp[0].powi(2) + opp[1].powi(2)).sqrt();
+    let dx = b[0] - a[0];
+    let dy = b[1] - a[1];
+
+    let angle = dy.atan2(dx); // Angle in radians
+
+    let angle2 = (180. - 90. - angle).to_radians();
+    let hyp2 = 0.2;
+    let x_comp = angle2.cos() * hyp2;
+    let y_comp = angle2.sin() * hyp2;
+    let cuboid_coords = vec![
+        // front_top_left
+        vec![a[0] + x_comp, a[1] + y_comp, a[2]],
+        // front_top_right
+        vec![a[0] - x_comp, a[1] - y_comp, a[2]],
+        // front_bot_left
+        vec![a[0] + x_comp, a[1] + y_comp, a[2] - LAYER_HEIGHT],
+        // front_bot_right
+        vec![a[0] - x_comp, a[1] - y_comp, a[2] - LAYER_HEIGHT],
+        // back_top_left
+        vec![b[0] + x_comp, b[1] + y_comp, b[2]],
+        // back_top_right
+        vec![b[0] - x_comp, b[1] - y_comp, b[2]],
+        // back_bot_left
+        vec![b[0] + x_comp, b[1] + y_comp, b[2] - LAYER_HEIGHT],
+        // back_bot_right
+        vec![b[0] - x_comp, b[1] - y_comp, b[2] - LAYER_HEIGHT],
+    ];
+    Ok(cuboid_from_coords(cuboid_coords))
 }
 
 // no F
@@ -101,20 +159,12 @@ fn update_position(last: &Vec<f64>, g1: G1) -> Vec<f64> {
 }
 
 fn main() {
-    // Example usage
-    let cuboid = Cuboid::new((0.0, 0.0, 0.0), (3.0, 4.0, 5.0));
-    println!("Cuboid: {:?}", cuboid);
-    println!("Volume: {}", cuboid.volume());
-    println!("Surface Area: {}", cuboid.surface_area());
-    println!("Is Cube: {}", cuboid.is_cube());
 
-    let point = (2.0, 2.0, 2.0);
-    println!("Contains point {:?}: {}", point, cuboid.contains(point));
 
     // todo in featurescipt make 2 cuboids that share a single edge, and see if union fails
     // this is the def of non manifold in cad
 
-    let filename = "tests/square_ring/sliced/plate_1.gcode";
+    let filename = "tests/wormdrive/sliced/plate_1.gcode";
     // Attempt to get the current working directory
     let current_dir = env::current_dir().unwrap();
 
@@ -130,7 +180,7 @@ fn main() {
             g1s.push(g1);
         }
     }
-    let mut cur_pos = vec![0.,0.,0.];
+    let mut cur_pos = vec![0., 0., 0.];
     let mut cur_ext = 0.;
 
     let mut coords = vec![];
@@ -143,13 +193,31 @@ fn main() {
             } else {
                 cur_ext += e;
             }
-
         }
         cur_pos = pos;
     }
-    let json = serde_json::to_string_pretty(&coords).unwrap();
-    let mut file = File::create("sq_coords.json").unwrap();
-    file.write_all(json.as_bytes()).unwrap();
-    // println!("{}",coords.len());
-    println!("{}",coords.len());
+
+    // let cuboid = cuboid_from_seg(coords[0].clone()).unwrap();
+    let cs = coords.iter().map(|x| cuboid_from_seg(x).unwrap()).collect::<Vec<_>>();
+    let cuboid = cs[0].clone();
+    println!("{:?}", cuboid);
+    // Example usage
+    println!("Cuboid: {:?}", cuboid);
+    println!("Volume: {}", cuboid.volume());
+    println!("Surface Area: {}", cuboid.surface_area());
+    println!("Is Cube: {}", cuboid.is_cube());
+
+    let point = (2.0, 2.0, 2.0);
+    println!("Contains point {:?}: {}", point, cuboid.contains(point));
+
+    let vol: f64 = cs.iter().map(|x| x.volume()).sum();
+    // PLA DENSITY IS 1.24 g/cm³
+    println!("volume of print assuming .4x.2xl boxes: {}", vol);
+    println!("n cuboids: {}", cs.len());
+
+    // let json = serde_json::to_string_pretty(&coords).unwrap();
+    // let mut file = File::create("sq_coords.json").unwrap();
+    // file.write_all(json.as_bytes()).unwrap();
+    // // println!("{}",coords.len());
+    println!("{}", coords.len());
 }
