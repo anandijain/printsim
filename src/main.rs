@@ -1,10 +1,24 @@
 use std::{
     env,
+    f64::consts::PI,
     fs::{read_to_string, File},
     io::Write,
 };
 
 use anyhow;
+
+const LAYER_HEIGHT: f64 = 0.2;
+const LINE_WIDTH: f64 = 0.01;
+const FILAMENT_DIAMETER: f64 = 1.75;
+// const FILAMENT_AREA: f64 = (FILAMENT_DIAMETER/2.0).powi(2)*PI;
+
+fn extrusion_distance_to_volume(x: f64) -> f64 {
+    (FILAMENT_DIAMETER / 2.0).powi(2) * PI * x
+}
+
+fn calculate_linewidth_given_extrusion_volume(seg_dist: f64, vol: f64) -> f64 {
+    vol / (LAYER_HEIGHT * seg_dist)
+}
 
 /// Rectangular Cuboid
 #[derive(Debug, Clone, Copy, PartialEq)]
@@ -64,8 +78,6 @@ impl Cuboid {
     }
 }
 
-const LAYER_HEIGHT: f64 = 0.2;
-
 fn cuboid_from_coords(coords: Vec<Vec<f64>>) -> Cuboid {
     // Ensure there are 8 corners (each with 3 coordinates)
     assert!(coords.len() == 8 && coords.iter().all(|c| c.len() == 3));
@@ -99,7 +111,7 @@ fn cuboid_from_seg(seg: &Vec<Vec<f64>>) -> Result<Cuboid, anyhow::Error> {
     let angle = dy.atan2(dx); // Angle in radians
 
     let angle2 = (180. - 90. - angle).to_radians();
-    let hyp2 = 0.2;
+    let hyp2 = LINE_WIDTH / 2.0; // average linewidth/2
     let x_comp = angle2.cos() * hyp2;
     let y_comp = angle2.sin() * hyp2;
     let cuboid_coords = vec![
@@ -159,8 +171,6 @@ fn update_position(last: &Vec<f64>, g1: G1) -> Vec<f64> {
 }
 
 fn main() {
-
-
     // todo in featurescipt make 2 cuboids that share a single edge, and see if union fails
     // this is the def of non manifold in cad
 
@@ -183,12 +193,15 @@ fn main() {
     let mut cur_pos = vec![0., 0., 0.];
     let mut cur_ext = 0.;
 
+    let mut exts = vec![];
+
     let mut coords = vec![];
     for g in g1s {
         let pos = update_position(&cur_pos, g);
         if let Some(e) = g.e {
             if cur_ext + e > 0. {
                 coords.push(vec![cur_pos.clone(), pos.clone()]);
+                exts.push(cur_ext + e);
                 cur_ext = 0.;
             } else {
                 cur_ext += e;
@@ -198,7 +211,10 @@ fn main() {
     }
 
     // let cuboid = cuboid_from_seg(coords[0].clone()).unwrap();
-    let cs = coords.iter().map(|x| cuboid_from_seg(x).unwrap()).collect::<Vec<_>>();
+    let cs = coords
+        .iter()
+        .map(|x| cuboid_from_seg(x).unwrap())
+        .collect::<Vec<_>>();
     let cuboid = cs[0].clone();
     println!("{:?}", cuboid);
     // Example usage
@@ -214,10 +230,11 @@ fn main() {
     // PLA DENSITY IS 1.24 g/cm³
     println!("volume of print assuming .4x.2xl boxes: {}", vol);
     println!("n cuboids: {}", cs.len());
+    println!("mm extruded: {}", exts.clone().into_iter().sum::<f64>());
 
-    // let json = serde_json::to_string_pretty(&coords).unwrap();
-    // let mut file = File::create("sq_coords.json").unwrap();
-    // file.write_all(json.as_bytes()).unwrap();
-    // // println!("{}",coords.len());
+    let json = serde_json::to_string_pretty(&exts.clone()).unwrap();
+    let mut file = File::create("wormdrive_extsrusion_distances.json").unwrap();
+    file.write_all(json.as_bytes()).unwrap();
+    // println!("{}",coords.len());
     println!("{}", coords.len());
 }
