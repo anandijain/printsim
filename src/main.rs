@@ -8,7 +8,7 @@ use std::{
 use anyhow;
 
 const LAYER_HEIGHT: f64 = 0.2;
-const LINE_WIDTH: f64 = 0.01;
+const LINE_WIDTH: f64 = 0.0;
 const FILAMENT_DIAMETER: f64 = 1.75;
 // const FILAMENT_AREA: f64 = (FILAMENT_DIAMETER/2.0).powi(2)*PI;
 
