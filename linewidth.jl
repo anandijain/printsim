@@ -27,3 +27,33 @@ f(d, v) = v/(.2*d)
 
 widths = map(x-> f(x[1], x[2]), zip(dists, areas))
 histogram(widths)
+
+
+a = [0, 0]
+b = [1, 1]
+angle = π/4
+lw = 1
+sind(45) ≈ 1/sqrt(2)
+dy = sind(45)*(lw/2)
+dx = cosd(45)*(lw/2)
+d = [dx, dy]
+
+
+front_left = a + d # front left should be [-.35, .35] front_right = a - d
+back_left = b + d
+back_right = b - d
+
+coords = [front_left, front_right, back_left, back_right]
+
+mini = copy(coords[1])
+maxi = copy(coords[1])
+
+for coord in coords[2:end]
+    for i in 1:2
+        mini[i] = min(mini[i], coord[i])
+        maxi[i] = max(maxi[i], coord[i])
+    end
+end
+
+
+.4*.2*norm(b-a)

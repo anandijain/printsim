@@ -8,7 +8,7 @@ use std::{
 use anyhow;
 
 const LAYER_HEIGHT: f64 = 0.2;
-const LINE_WIDTH: f64 = 0.0;
+const LINE_WIDTH: f64 = 0.4;
 const FILAMENT_DIAMETER: f64 = 1.75;
 // const FILAMENT_AREA: f64 = (FILAMENT_DIAMETER/2.0).powi(2)*PI;
 
@@ -20,12 +20,6 @@ fn calculate_linewidth_given_extrusion_volume(seg_dist: f64, vol: f64) -> f64 {
     vol / (LAYER_HEIGHT * seg_dist)
 }
 
-/// Rectangular Cuboid
-#[derive(Debug, Clone, Copy, PartialEq)]
-struct Cuboid {
-    min: (f64, f64, f64), // Minimum corner (x_min, y_min, z_min)
-    max: (f64, f64, f64), // Maximum corner (x_max, y_max, z_max)
-}
 
 #[derive(Debug, Clone, Copy, PartialEq)]
 struct G1 {
@@ -35,76 +29,84 @@ struct G1 {
     e: Option<f64>,
 }
 
+#[derive(Debug, Clone, PartialEq)]
+struct Cuboid {
+    vertices: [(f64, f64, f64); 8],  // 8 vertices, each with (x, y, z)
+}
+
 impl Cuboid {
-    // Constructor
-    fn new(min: (f64, f64, f64), max: (f64, f64, f64)) -> Self {
-        assert!(
-            min.0 <= max.0 && min.1 <= max.1 && min.2 <= max.2,
-            "Invalid cuboid dimensions: min must be <= max on all axes"
-        );
-        Self { min, max }
+    // Constructor that takes an array of 8 vertices
+    fn new(vertices: [(f64, f64, f64); 8]) -> Self {
+        Self { vertices }
     }
 
-    // Calculate the volume of the cuboid
+    // Example: Calculate the volume of the cuboid using the vertices
     fn volume(&self) -> f64 {
-        let (x_min, y_min, z_min) = self.min;
-        let (x_max, y_max, z_max) = self.max;
-        (x_max - x_min) * (y_max - y_min) * (z_max - z_min)
-    }
+        // Calculate two adjacent edges and the normal vector (cross product)
+        let v0 = self.vertices[0];
+        let v1 = self.vertices[1];
+        let v3 = self.vertices[3];
 
-    // Calculate the surface area of the cuboid
-    fn surface_area(&self) -> f64 {
-        let (x_min, y_min, z_min) = self.min;
-        let (x_max, y_max, z_max) = self.max;
-        let dx = x_max - x_min;
-        let dy = y_max - y_min;
-        let dz = z_max - z_min;
-        2.0 * (dx * dy + dy * dz + dx * dz)
-    }
+        let edge1 = (
+            v1.0 - v0.0,
+            v1.1 - v0.1,
+            v1.2 - v0.2,
+        );
 
-    // Check if the cuboid is a cube
-    fn is_cube(&self) -> bool {
-        let (x_min, y_min, z_min) = self.min;
-        let (x_max, y_max, z_max) = self.max;
-        (x_max - x_min) == (y_max - y_min) && (y_max - y_min) == (z_max - z_min)
-    }
+        let edge2 = (
+            v3.0 - v0.0,
+            v3.1 - v0.1,
+            v3.2 - v0.2,
+        );
 
-    // Check if a point is inside the cuboid
-    fn contains(&self, point: (f64, f64, f64)) -> bool {
-        let (x, y, z) = point;
-        let (x_min, y_min, z_min) = self.min;
-        let (x_max, y_max, z_max) = self.max;
-        x >= x_min && x <= x_max && y >= y_min && y <= y_max && z >= z_min && z <= z_max
+        // Cross product of two edges gives the area of the base
+        let normal = (
+            edge1.1 * edge2.2 - edge1.2 * edge2.1,
+            edge1.2 * edge2.0 - edge1.0 * edge2.2,
+            edge1.0 * edge2.1 - edge1.1 * edge2.0,
+        );
+
+        let base_area = (normal.0.powi(2) + normal.1.powi(2) + normal.2.powi(2)).sqrt();
+
+        // Height is the distance between two parallel faces
+        let v4 = self.vertices[4];
+        let height = ((v4.0 - v0.0).powi(2) + (v4.1 - v0.1).powi(2) + (v4.2 - v0.2).powi(2)).sqrt();
+
+        base_area * height
     }
 }
 
-fn cuboid_from_coords(coords: Vec<Vec<f64>>) -> Cuboid {
-    // Ensure there are 8 corners (each with 3 coordinates)
-    assert!(coords.len() == 8 && coords.iter().all(|c| c.len() == 3));
 
-    // Initialize min and max with the first coordinate
-    let mut min = coords[0].clone();
-    let mut max = coords[0].clone();
+// fn cuboid_from_coords(coords: Vec<Vec<f64>>) -> Cuboid {
+//     // Ensure there are 8 corners (each with 3 coordinates)
+//     assert!(coords.len() == 8 && coords.iter().all(|c| c.len() == 3));
 
-    // Iterate over the remaining coordinates to find the true min and max
-    for coord in &coords[1..] {
-        for i in 0..3 {
-            min[i] = min[i].min(coord[i]); // Find minimum for each axis
-            max[i] = max[i].max(coord[i]); // Find maximum for each axis
-        }
-    }
+//     // Initialize min and max with the first coordinate
+//     let mut min = coords[0].clone();
+//     let mut max = coords[0].clone();
 
-    Cuboid::new((min[0], min[1], min[2]), (max[0], max[1], max[2]))
-}
+//     // Iterate over the remaining coordinates to find the true min and max
+//     for coord in &coords[1..] {
+//         for i in 0..3 {
+//             min[i] = min[i].min(coord[i]); // Find minimum for each axis
+//             max[i] = max[i].max(coord[i]); // Find maximum for each axis
+//         }
+//     }
+
+//     Cuboid::new((min[0], min[1], min[2]), (max[0], max[1], max[2]))
+// }
 
 // s is the string of the whole gcode
 fn cuboid_from_seg(seg: &Vec<Vec<f64>>) -> Result<Cuboid, anyhow::Error> {
     let (a, b) = (seg[0].clone(), seg[1].clone());
     assert!(a[2] == b[2]);
+    
     let hyp = vec![b[0] - a[0], b[1] - a[1]];
     let opp = vec![b[0], a[1]];
+
     let hyp_dist = (hyp[0].powi(2) + hyp[1].powi(2)).sqrt();
     let opp_dist = (opp[0].powi(2) + opp[1].powi(2)).sqrt();
+
     let dx = b[0] - a[0];
     let dy = b[1] - a[1];
 
@@ -116,23 +118,23 @@ fn cuboid_from_seg(seg: &Vec<Vec<f64>>) -> Result<Cuboid, anyhow::Error> {
     let y_comp = angle2.sin() * hyp2;
     let cuboid_coords = vec![
         // front_top_left
-        vec![a[0] + x_comp, a[1] + y_comp, a[2]],
+        (a[0] + x_comp, a[1] + y_comp, a[2]),
         // front_top_right
-        vec![a[0] - x_comp, a[1] - y_comp, a[2]],
+        (a[0] - x_comp, a[1] - y_comp, a[2]),
         // front_bot_left
-        vec![a[0] + x_comp, a[1] + y_comp, a[2] - LAYER_HEIGHT],
+        (a[0] + x_comp, a[1] + y_comp, a[2] - LAYER_HEIGHT),
         // front_bot_right
-        vec![a[0] - x_comp, a[1] - y_comp, a[2] - LAYER_HEIGHT],
+        (a[0] - x_comp, a[1] - y_comp, a[2] - LAYER_HEIGHT),
         // back_top_left
-        vec![b[0] + x_comp, b[1] + y_comp, b[2]],
+        (b[0] + x_comp, b[1] + y_comp, b[2]),
         // back_top_right
-        vec![b[0] - x_comp, b[1] - y_comp, b[2]],
+        (b[0] - x_comp, b[1] - y_comp, b[2]),
         // back_bot_left
-        vec![b[0] + x_comp, b[1] + y_comp, b[2] - LAYER_HEIGHT],
+        (b[0] + x_comp, b[1] + y_comp, b[2] - LAYER_HEIGHT),
         // back_bot_right
-        vec![b[0] - x_comp, b[1] - y_comp, b[2] - LAYER_HEIGHT],
+        (b[0] - x_comp, b[1] - y_comp, b[2] - LAYER_HEIGHT),
     ];
-    Ok(cuboid_from_coords(cuboid_coords))
+    Ok(Cuboid::new(cuboid_coords.try_into().unwrap()))
 }
 
 // no F
@@ -220,11 +222,11 @@ fn main() {
     // Example usage
     println!("Cuboid: {:?}", cuboid);
     println!("Volume: {}", cuboid.volume());
-    println!("Surface Area: {}", cuboid.surface_area());
-    println!("Is Cube: {}", cuboid.is_cube());
+    // println!("Surface Area: {}", cuboid.surface_area());
+    // println!("Is Cube: {}", cuboid.is_cube());
 
-    let point = (2.0, 2.0, 2.0);
-    println!("Contains point {:?}: {}", point, cuboid.contains(point));
+    // let point = (2.0, 2.0, 2.0);
+    // println!("Contains point {:?}: {}", point, cuboid.contains(point));
 
     let vol: f64 = cs.iter().map(|x| x.volume()).sum();
     // PLA DENSITY IS 1.24 g/cm³
