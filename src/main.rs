@@ -6,6 +6,7 @@ use std::{
 };
 
 use anyhow;
+use serde::{Deserialize, Serialize};
 
 const LAYER_HEIGHT: f64 = 0.2;
 const LINE_WIDTH: f64 = 0.4;
@@ -29,7 +30,7 @@ struct G1 {
     e: Option<f64>,
 }
 
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 struct Cuboid {
     vertices: [(f64, f64, f64); 8],  // 8 vertices, each with (x, y, z)
 }
@@ -95,27 +96,26 @@ impl Cuboid {
 
 //     Cuboid::new((min[0], min[1], min[2]), (max[0], max[1], max[2]))
 // }
-
-// s is the string of the whole gcode
 fn cuboid_from_seg(seg: &Vec<Vec<f64>>) -> Result<Cuboid, anyhow::Error> {
     let (a, b) = (seg[0].clone(), seg[1].clone());
-    assert!(a[2] == b[2]);
-    
-    let hyp = vec![b[0] - a[0], b[1] - a[1]];
-    let opp = vec![b[0], a[1]];
+    assert!(a[2] == b[2], "Z-coordinates must match");
 
-    let hyp_dist = (hyp[0].powi(2) + hyp[1].powi(2)).sqrt();
-    let opp_dist = (opp[0].powi(2) + opp[1].powi(2)).sqrt();
+    let dx = b[0] - a[0]; // Change in X
+    let dy = b[1] - a[1]; // Change in Y
 
-    let dx = b[0] - a[0];
-    let dy = b[1] - a[1];
+    // Compute the main path angle in radians
+    let angle = dy.atan2(dx);
 
-    let angle = dy.atan2(dx); // Angle in radians
+    // Compute the perpendicular angle (90 degrees off)
+    let angle2 = angle + std::f64::consts::FRAC_PI_2;
 
-    let angle2 = (180. - 90. - angle).to_radians();
-    let hyp2 = LINE_WIDTH / 2.0; // average linewidth/2
+    let hyp2 = LINE_WIDTH / 2.0; // Half the line width
+
+    // Compute the perpendicular components for cuboid width
     let x_comp = angle2.cos() * hyp2;
     let y_comp = angle2.sin() * hyp2;
+
+    // Generate the 8 vertices of the cuboid
     let cuboid_coords = vec![
         // front_top_left
         (a[0] + x_comp, a[1] + y_comp, a[2]),
@@ -134,8 +134,10 @@ fn cuboid_from_seg(seg: &Vec<Vec<f64>>) -> Result<Cuboid, anyhow::Error> {
         // back_bot_right
         (b[0] - x_comp, b[1] - y_comp, b[2] - LAYER_HEIGHT),
     ];
+
     Ok(Cuboid::new(cuboid_coords.try_into().unwrap()))
 }
+
 
 // no F
 // assume g1 f exclusive with xyze
@@ -176,7 +178,7 @@ fn main() {
     // todo in featurescipt make 2 cuboids that share a single edge, and see if union fails
     // this is the def of non manifold in cad
 
-    let filename = "tests/wormdrive/sliced/plate_1.gcode";
+    let filename = "tests/square_ring/sliced/plate_1.gcode";
     // Attempt to get the current working directory
     let current_dir = env::current_dir().unwrap();
 
@@ -234,8 +236,8 @@ fn main() {
     println!("n cuboids: {}", cs.len());
     println!("mm extruded: {}", exts.clone().into_iter().sum::<f64>());
 
-    let json = serde_json::to_string_pretty(&exts.clone()).unwrap();
-    let mut file = File::create("wormdrive_extsrusion_distances.json").unwrap();
+    let json = serde_json::to_string_pretty(&cs.clone()).unwrap();
+    let mut file = File::create("square_ring_cuboids.json").unwrap();
     file.write_all(json.as_bytes()).unwrap();
     // println!("{}",coords.len());
     println!("{}", coords.len());

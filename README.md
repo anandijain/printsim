@@ -21,6 +21,9 @@ todo:
 * benchmarking and improving performance
 * load the step into fusion
 * do a simulatino 
+* generate a huge zoo kcl expr and benchmark how quickly it can load in the cuboids
+* fix the angle problem where along one axis the cuboid is fine and the other is 0-width
+* also find a minimal model where we see the stringing problem (found when viewing the test_hook cuboids in blender)
 
 
 
